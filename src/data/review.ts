@@ -5,6 +5,7 @@ export const reviews = [
     name: "Sophia Ramirez",
     imgSrc: "/images/people-1.jpg",
     company: "PixelForge",
+    rating: 5,
   },
   {
     content:
@@ -12,6 +13,7 @@ export const reviews = [
     name: "Ethan Caldwell",
     imgSrc: "/images/people-2.jpg",
     company: "NexaWave",
+    rating: 4,
   },
   {
     content:
@@ -19,6 +21,7 @@ export const reviews = [
     name: "Liam Bennett",
     imgSrc: "/images/people-3.jpg",
     company: "CodeCraft",
+    rating: 5,
   },
   {
     content:
@@ -26,6 +29,7 @@ export const reviews = [
     name: "Noah Williams",
     imgSrc: "/images/people-4.jpg",
     company: "BrightWeb",
+    rating: 3,
   },
   {
     content:
@@ -33,6 +37,7 @@ export const reviews = [
     name: "Ava Thompson",
     imgSrc: "/images/people-5.jpg",
     company: "TechMosaic",
+    rating: 4,
   },
   {
     content:
@@ -40,5 +45,6 @@ export const reviews = [
     name: "Jonathan",
     imgSrc: "/images/people-6.jpg",
     company: "Skyline Digital",
+    rating: 5,
   },
 ];

@@ -3,4 +3,5 @@ export interface ReviewCardProps {
   name: string;
   imgSrc: string;
   company: string;
+  rating: number;
 }
