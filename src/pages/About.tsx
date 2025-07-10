@@ -1,5 +1,3 @@
-import Skill from "../components/skill/Skill";
-
 const aboutItems = [
   {
     label: "Personal Projects",
@@ -65,7 +63,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Skill />
     </section>
   );
 };

@@ -40,9 +40,9 @@ const Hero = () => {
               href="/public/ZInHtetHlaing_Resume.pdf"
               download={true}
               target="_blank"
-            />{" "}
+            />
             <ButtonOutline
-              href="/about"
+              href="/#about"
               label="Scroll down"
               icon={<ArrowDown className="size-4" />}
             />

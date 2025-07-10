@@ -18,14 +18,14 @@ const ButtonOutline = ({
 }: ButtonOutlineProps) => {
   if (href) {
     return (
-      <Link to={href} target={target} className={`btn btn-outline ${classes}`}>
+      <a href={href} target={target} className={`btn btn-outline ${classes}`}>
         {label}
         {icon ? (
           <span className="material-symbols-rounded" aria-hidden="true">
             {icon}
           </span>
         ) : undefined}
-      </Link>
+      </a>
     );
   } else {
     return (

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 
 type NavbarProps = {
   navOpen: boolean;
@@ -45,28 +44,28 @@ const Navbar = ({ navOpen }: NavbarProps) => {
   const navItems = [
     {
       label: "Home",
-      link: "/",
+      link: "#home",
       className: "nav-link active",
       ref: lastActiveLink,
     },
     {
       label: "About",
-      link: "/about",
+      link: "#about",
       className: "nav-link",
     },
     {
       label: "Work",
-      link: "/work",
+      link: "#work",
       className: "nav-link",
     },
     {
       label: "Reviews",
-      link: "/reviews",
+      link: "#reviews",
       className: "nav-link",
     },
     {
       label: "Contact",
-      link: "/contact",
+      link: "#contact",
       className: "nav-link md:hidden",
     },
   ];
@@ -74,15 +73,15 @@ const Navbar = ({ navOpen }: NavbarProps) => {
   return (
     <nav className={`navbar ${navOpen ? "active" : ""}`}>
       {navItems.map((item, index) => (
-        <Link
+        <a
           key={index}
-          to={item.link}
+          href={item.link}
           ref={item.ref}
           className={item.className}
           onClick={currentActiveLink}
         >
           {item.label}
-        </Link>
+        </a>
       ))}
       <div className="active-box" ref={activeBox}></div>
     </nav>
