@@ -31,7 +31,7 @@ const Navbar = ({ navOpen }: NavbarProps) => {
   const currentActiveLink = (event: React.MouseEvent<HTMLAnchorElement>) => {
     lastActiveLink.current?.classList.remove("active");
     event.currentTarget.classList.add("active");
-    lastActiveLink.current = event.target;
+    lastActiveLink.current = event.currentTarget;
 
     activeBox.current!.style.top = event.currentTarget?.offsetTop + "px";
 

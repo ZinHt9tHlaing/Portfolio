@@ -11,7 +11,8 @@ const Header = () => {
       <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid md:grid-cols-[1fr,3fr,1fr]">
         <h1>
           <Link to="/" className="logo">
-            <img src="/src/images/logo.svg" alt="logo" width={40} height={40} />
+            {/* <img src="/src/images/logo.svg" alt="logo" width={40} height={40} /> */}
+            <h1 className="text-3xl font-bold hover:scale-105 duration-300">Zin Htet</h1>
           </Link>
         </h1>
 
