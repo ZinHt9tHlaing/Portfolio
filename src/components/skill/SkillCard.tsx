@@ -1,9 +1,4 @@
-interface SkillCardProps {
-  imgSrc: string;
-  label: string;
-  desc: string;
-  classes?: string;
-}
+import { SkillCardProps } from "../../types/skills/SkillCard";
 
 const SkillCard = ({ imgSrc, label, desc, classes }: SkillCardProps) => {
   return (

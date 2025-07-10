@@ -11,7 +11,10 @@ const Header = () => {
         <h1>
           <a href="/" className="logo">
             {/* <img src="/src/images/logo.svg" alt="logo" width={40} height={40} /> */}
-            <h1 className="text-3xl text-yellow-500 font-bold hover:scale-105 duration-300">
+            <h1
+              className="text-3xl text-yellow-500 font-bold hover:scale-105 duration-300"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
               Zin Htet
             </h1>
           </a>

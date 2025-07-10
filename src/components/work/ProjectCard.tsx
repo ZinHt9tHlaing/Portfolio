@@ -1,12 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-
-interface ProjectCardProps {
-  imgSrc: string;
-  title: string;
-  tags: string[];
-  projectLink: string;
-  classes?: string;
-}
+import { ProjectCardProps } from "../../types/work/projectCard";
 
 const ProjectCard = ({
   imgSrc,

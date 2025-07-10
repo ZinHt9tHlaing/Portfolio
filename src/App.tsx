@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./pages/About";
 import Skill from "./components/skill/Skill";
 import Work from "./pages/Work";
+import Review from "./pages/Review";
 
 const App = () => {
   return (
@@ -13,8 +14,8 @@ const App = () => {
         <About />
         <Skill />
         <Work />
+        <Review />
       </main>
-      {/* <Outlet /> */}
     </>
   );
 };

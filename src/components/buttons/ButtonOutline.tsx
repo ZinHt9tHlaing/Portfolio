@@ -1,13 +1,4 @@
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
-
-interface ButtonOutlineProps {
-  href: string;
-  target: string;
-  label: string;
-  icon: ReactNode;
-  classes: string;
-}
+import { ButtonOutlineProps } from "../../types/buttons/buttonType";
 
 const ButtonOutline = ({
   href,
