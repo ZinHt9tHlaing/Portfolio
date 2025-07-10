@@ -28,6 +28,7 @@ body {
 }
 
 /* Utilities */
+
 /* .material-symbols-rounded{
   @apply w-[1rem] h-[1rem] overflow-hidden;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48
@@ -43,6 +44,10 @@ body {
 
 .img-cover {
   @apply w-full h-full object-cover;
+}
+
+.section {
+  @apply pt-20 lg:pt-32;
 }
 
 /* menu btn */
@@ -86,7 +91,7 @@ body {
   @apply text-[18px];
 }
 
-.btn:has( .material-symbols-rounded) {
+.btn:has(.material-symbols-rounded) {
   @apply pr-3;
 }
 

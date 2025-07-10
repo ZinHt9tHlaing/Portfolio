@@ -12,7 +12,9 @@ const Header = () => {
         <h1>
           <Link to="/" className="logo">
             {/* <img src="/src/images/logo.svg" alt="logo" width={40} height={40} /> */}
-            <h1 className="text-3xl font-bold hover:scale-105 duration-300">Zin Htet</h1>
+            <h1 className="text-3xl text-yellow-500 font-bold hover:scale-105 duration-300">
+              Zin Htet
+            </h1>
           </Link>
         </h1>
 
@@ -21,7 +23,9 @@ const Header = () => {
             onClick={() => setNavOpen(!navOpen)}
             className="menu-btn md:hidden"
           >
-            <span className="material-symbols-rounded">{navOpen ? <X /> : <Menu />}</span>
+            <span className="material-symbols-rounded">
+              {navOpen ? <X /> : <Menu />}
+            </span>
           </button>
           <Navbar navOpen={navOpen} />
         </div>
