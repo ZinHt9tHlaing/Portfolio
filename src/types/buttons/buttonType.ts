@@ -5,7 +5,7 @@ export interface ButtonOutlineProps {
   target: string;
   label: string;
   icon: ReactNode;
-  classes: string;
+  classes?: string;
 }
 
 export interface ButtonPrimaryProps extends ButtonOutlineProps {
