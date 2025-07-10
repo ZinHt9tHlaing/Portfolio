@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="flex items-center gap-3">
             <figure className="img-box size-9 rounded-lg">
               <img
-                src="/src/images/avatar-1.jpg"
+                src="/images/avatar-1.jpg"
                 alt="avatar"
                 width={40}
                 height={40}
