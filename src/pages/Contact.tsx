@@ -1,7 +1,36 @@
+import z from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { socialLinks } from "../data/contact";
+import { contactSchema } from "../schema/contactSchema";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { toast } from "react-toastify";
 
+type ContactFormInputs = z.infer<typeof contactSchema>;
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormInputs>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactFormInputs) => {
+    try {
+      await axios.post("https://getform.io/f/bwnwddya", data, {
+        validateStatus: () => true,
+      });
+      toast.success("Message sent successfully!");
+      reset();
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.");
+      console.error("Form submission error", error);
+    }
+  };
+
   return (
     <section id="contact" className="section">
       <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
@@ -29,11 +58,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <form
-          action="https://getform.io/f/bvryqqyb"
-          method="POST"
-          className="xl:pl-10 2xl:pl-20"
-        >
+        <form className="xl:pl-10 2xl:pl-20" onSubmit={handleSubmit(onSubmit)}>
           <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
             <div className="mb-4">
               <label htmlFor="name" className="label">
@@ -41,13 +66,17 @@ const Contact = () => {
               </label>
               <input
                 type="text"
-                name="name"
                 id="name"
                 autoComplete="name"
                 placeholder="Zin Htet"
                 className="text-field"
-                required
+                {...register("name")}
               />
+              {errors.name && (
+                <p className="text-sm text-red-500 mt-1">
+                  {errors.name.message}
+                </p>
+              )}
             </div>
 
             <div className="mb-4">
@@ -56,13 +85,17 @@ const Contact = () => {
               </label>
               <input
                 type="email"
-                name="email"
                 id="email"
                 autoComplete="email"
                 placeholder="zhh@example.com"
                 className="text-field"
-                required
+                {...register("email")}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500 mt-1">
+                  {errors.email.message}
+                </p>
+              )}
             </div>
 
             <div className="mb-4 md:col-span-2">
@@ -70,19 +103,27 @@ const Contact = () => {
                 Message
               </label>
               <textarea
-                name="message"
                 id="message"
                 autoComplete="message"
                 placeholder="Hi!"
                 className="text-field resize-y min-h-32 max-h-80"
-                required
-              ></textarea>
+                {...register("message")}
+              />
+              {errors.message && (
+                <p className="text-sm text-red-500 mt-1">
+                  {errors.message.message}
+                </p>
+              )}
             </div>
 
             <button
+              disabled={isSubmitting}
               type="submit"
-              className="btn btn-primary md:col-span-2 [&]:max-w-full w-full justify-center active:scale-90 duration-200"
+              className="btn btn-primary  md:col-span-2 [&]:max-w-full w-full justify-center disabled:cursor-not-allowed disabled:bg-gray-600 active:scale-90 duration-200"
             >
+              {isSubmitting && (
+                <div className="size-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
+              )}
               Submit
             </button>
           </div>
