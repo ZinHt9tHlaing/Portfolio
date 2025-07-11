@@ -1,5 +1,6 @@
 import { socialLinks } from "../data/contact";
 
+
 const Contact = () => {
   return (
     <section id="contact" className="section">
@@ -28,7 +29,11 @@ const Contact = () => {
           </div>
         </div>
 
-        <form action="" method="POST" className="xl:pl-10 2xl:pl-20">
+        <form
+          action="https://getform.io/f/bvryqqyb"
+          method="POST"
+          className="xl:pl-10 2xl:pl-20"
+        >
           <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
             <div className="mb-4">
               <label htmlFor="name" className="label">
@@ -76,7 +81,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="btn btn-primary [&]:max-w-full w-full justify-center active:scale-90 duration-200"
+              className="btn btn-primary md:col-span-2 [&]:max-w-full w-full justify-center active:scale-90 duration-200"
             >
               Submit
             </button>
