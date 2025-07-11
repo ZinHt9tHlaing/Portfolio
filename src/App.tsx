@@ -6,6 +6,7 @@ import Work from "./pages/Work";
 import Review from "./pages/Review";
 import Contact from "./pages/Contact";
 import { Bounce, ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Review />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 };

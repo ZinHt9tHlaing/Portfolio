@@ -105,11 +105,11 @@ body {
 }
 
 .btn-primary {
-  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400 active:scale-90 transition-transform duration-200;
+  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400 active:scale-95 transition-transform duration-200;
 }
 
 .btn-outline {
-  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 active:scale-90 transition-transform duration-200;
+  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 active:scale-95 transition-transform duration-200;
 }
 
 /* Text Field */
@@ -123,5 +123,5 @@ body {
 }
 
 .text-field::placeholder {
-  @apply text-zinc-400;
+  @apply text-zinc-500;
 }
